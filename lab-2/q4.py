@@ -1,12 +1,9 @@
-# WAP function that take two list and return true if they have at leat two common elements
+# WAP function that take two list and return true if they have at leat two common elements at least two element
 
-def common_elements(l1, l2):
-    for i in l1:
-        for j in l2:
-            if i == j:
-                return True
-    return False
+def common_elements(list1, list2):
+    common = [x for x in list1 if x in list2]
+    return len(common) >= 2
 
 l1 = [1, 2, 3, 4, 5]
-l2 = [6, 7, 8, 9, 10]
+l2 = [1, 2, 3, 4, 5]
 print(common_elements(l1, l2))
